@@ -1,0 +1,361 @@
+/*========================================================
+                        Camera
+=========================================================*/
+.camera_container {
+  position: relative;
+  padding-bottom: 56.56%;
+}
+@media (max-width: 618.81188119px) {
+  .camera_container {
+    padding-bottom: 350px;
+  }
+}
+.camera_wrap {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin-bottom: 0 !important;
+  height: 100%;
+  background: #fff;
+  z-index: 0;
+}
+.camera_wrap:before,
+.camera_wrap:after {
+  content: " ";
+  display: table;
+}
+.camera_wrap:after {
+  clear: both;
+}
+.camera_wrap img {
+  max-width: none !important;
+}
+.camera_fakehover {
+  height: 100%;
+  min-height: 60px;
+  position: relative;
+  width: 100%;
+}
+.camera_src {
+  display: none;
+}
+.cameraCont,
+.cameraContents {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.cameraSlide {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.cameraContent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+.camera_target {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  text-align: left;
+  z-index: 0;
+}
+.camera_overlayer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+.camera_target_content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+.camera_loader {
+  background: #ffffff url(../images/camera-loader.gif) no-repeat center;
+  border: 1px solid #ffffff;
+  border-radius: 18px;
+  height: 37px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  margin: -18px 0 0 -18px;
+  top: 50%;
+  width: 36px;
+  z-index: 3;
+}
+.camera_nav_cont {
+  height: 65px;
+  overflow: hidden;
+  position: absolute;
+  right: 9px;
+  top: 15px;
+  width: 120px;
+  z-index: 4;
+}
+.camerarelative {
+  overflow: hidden;
+  position: relative;
+}
+.imgFake {
+  cursor: pointer;
+}
+.camera_command_wrap .hideNav {
+  display: none;
+}
+.camera_command_wrap {
+  left: 0;
+  position: relative;
+  right: 0;
+  z-index: 4;
+}
+.showIt {
+  display: none;
+}
+.camera_clear {
+  clear: both;
+  display: block;
+  height: 1px;
+  margin: -1px 0 25px;
+  position: relative;
+}
+.camera_caption {
+  display: none;
+}
+.cameraContent .camera_caption {
+  display: block;
+}
+/*================   Custom Layout&Styles   =====================*/
+.camera_caption_title {
+  font: 700 100px/80px "Trebuchet MS", sans-serif;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.camera_caption_title span {
+  letter-spacing: -1px;
+}
+.camera_caption_title + .camera_caption_subtitle {
+  margin-top: 18px;
+  font: 20px/20px "Trebuchet MS", sans-serif;
+  color: #ffffff;
+}
+.camera_caption_subtitle + .btn {
+  margin-top: 38px;
+  margin-left: 2px;
+}
+.camera_caption .btn {
+  display: inline-block;
+  padding: 20px 30px 19px 34px;
+  font: 700 24px/24px "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  background: none;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.camera_caption .btn:hover {
+  color: #262523;
+  background: #dbdedf;
+  border-color: #dbdedf;
+}
+.camera_nav {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  bottom: 0;
+}
+.camera_next,
+.camera_prev {
+  display: inline-block;
+  font-family: "FontAwesome";
+  padding: 25px 35px 31px 34px;
+  text-align: center;
+  font-size: 32px;
+  color: #2c2b2e;
+  background-color: #ffffff;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.camera_next:hover,
+.camera_prev:hover {
+  color: #ffffff;
+  background-color: #f6c452;
+}
+.camera_next:active,
+.camera_prev:active {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+.camera_next:before {
+  content: "\f105";
+}
+.camera_prev:before {
+  content: "\f104";
+}
+@media (min-width: 1199px) and (max-width: 1585px) {
+  .camera_next,
+  .camera_prev {
+    font-size: 18px;
+    padding: 17px 22px;
+  }
+  .well__cap {
+    padding-top: 240px;
+  }
+  .camera_caption_title {
+    font: 700 80px/70px "Trebuchet MS", sans-serif;
+  }
+  .camera_caption_subtitle {
+    font: 16px/12px "Trebuchet MS", sans-serif;
+  }
+  .camera_caption .btn {
+    padding: 25px 30px;
+    font: 700 18px/18px "Trebuchet MS", sans-serif;
+  }
+}
+@media (min-width: 980px) and (max-width: 1199px) {
+  .camera_next,
+  .camera_prev {
+    font-size: 18px;
+    padding: 17px 22px;
+  }
+  .well__h {
+    padding-top: 50px;
+  }
+  .well__cap {
+    padding-top: 180px;
+  }
+  .camera_caption_title {
+    font: 700 55px/55px "Trebuchet MS", sans-serif;
+  }
+  .camera_caption_title + .camera_caption_subtitle {
+    margin-top: 20px;
+  }
+  .camera_caption_subtitle {
+    font: 16px/12px "Trebuchet MS", sans-serif;
+  }
+  .camera_caption .btn {
+    padding: 20px 25px;
+    font: 700 17px/17px "Trebuchet MS", sans-serif;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .brand {
+    display: inline;
+  }
+  .brand,
+  .nav {
+    text-align: center;
+  }
+  .stuck_container {
+    top: -30px;
+  }
+  .camera_next,
+  .camera_prev {
+    font-size: 14px;
+    padding: 13px 18px;
+  }
+  .well__cap {
+    padding-top: 180px;
+  }
+  .camera_caption .grid_7 {
+    width: 100%;
+  }
+  .camera_caption_title {
+    font: 700 40px/40px "Trebuchet MS", sans-serif;
+  }
+  .camera_caption_title + .camera_caption_subtitle {
+    margin-top: 20px;
+  }
+  .camera_caption_subtitle {
+    font: 13px/10px "Trebuchet MS", sans-serif;
+  }
+  .camera_caption .btn {
+    padding: 10px;
+    border: 2px silid #ffffff;
+    font-size: 16px;
+  }
+  .camera_caption_subtitle + .btn {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .well__h {
+    padding-top: 20px;
+  }
+  .brand + .nav {
+    margin-top: 20px;
+  }
+  .brand_name a {
+    font-size: 50px !important;
+  }
+  .camera_next,
+  .camera_prev {
+    font-size: 14px;
+    padding: 13px 18px;
+  }
+  .well__cap {
+    padding-top: 110px;
+  }
+  .camera_caption_title {
+    font: 700 25px/27px "Trebuchet MS", sans-serif;
+  }
+  .camera_caption_title + .camera_caption_subtitle {
+    margin-top: 20px;
+  }
+  .camera_caption_subtitle {
+    font: 13px/10px "Trebuchet MS", sans-serif;
+  }
+  .camera_caption .btn {
+    padding: 10px;
+    border: 2px silid #ffffff;
+    font-size: 16px;
+  }
+  .camera_caption_subtitle + .btn {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 479px) {
+  .brand + .nav {
+    margin-top: 30px;
+  }
+  .camera_nav {
+    display: none;
+  }
+  .well__cap {
+    margin-top: 40px;
+  }
+  .camera_caption_title {
+    font: 700 30px/30px "Trebuchet MS", sans-serif;
+  }
+  .camera_caption_subtitle {
+    display: none;
+  }
+  .camera_caption .btn {
+    font: 700 15px/15px "Trebuchet MS", sans-serif;
+  }
+}
